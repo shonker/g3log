@@ -21,7 +21,7 @@ ref: [codespaces.md](docs/codespaces.md)
 
 
 ## 1. Easy usage in files
-Avoid deep dependency injection complexity and instead get access to the logger as easy as 
+Avoid deep dependency injection complexity and instead get access to the logger as easy as:
 ```
 #include <g3log/g3log.hpp>
 ``` 
