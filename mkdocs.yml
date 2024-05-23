@@ -1,9 +1,12 @@
 site_name: G3log, an asynchronous "crash-safe" logger
-site_author: 'Kjell Hedström'
+site_author: 'Kjell Hedstrom'
+
 theme: 
   name: material
+  
 plugins:
   - search
+
 docs_dir: docs/
 
 nav: 
