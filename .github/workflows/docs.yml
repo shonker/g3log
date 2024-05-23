@@ -20,8 +20,7 @@ jobs:
           python-version: 3.x
       - run: pip install mkdocs && pip install mkdocs-material==8.5
       - name: Deploy site
-        uses: mhausenblas/mkdocs-deploy-gh-pages@master
-      #   run: mkdocs build
-      # # build according to mkdocs.yml in root directory
-      # - name: Deploy https://kjellkod.github.io/g3log/
-      #   run: mkdocs gh-deploy --force
+        run: mkdocs build
+      # build according to mkdocs.yml in root directory
+      - name: Deploy https://kjellkod.github.io/g3log/
+        run: mkdocs gh-deploy --force
