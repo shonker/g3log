@@ -13,7 +13,7 @@ G3log is an asynchronous logger with three main features:
 
 The super quick introduction to g3log can be seen in the steps 1 - 9 below. 
 
-For more in-depth information please see the full usage description in [g3log_usage.md](docs/g3log_usage.md).If you want to understand better the internals of g3log, then plase look at the [API.md](docs/API.md) for both high-level and deep-dive insights. 
+For more in-depth information please see the full usage description in [g3log_usage.md](docs/g3log_usage.md). If you want to understand better the internals of g3log, then plase look at the [API.md](docs/API.md) for both high-level and deep-dive insights. 
 
 
 ## Experiment and try-out g3log in Github Codespaces 
@@ -28,7 +28,7 @@ Avoid deep dependency injection complexity and instead get access to the logger 
 
 
 ## 2. Access to streaming and print_f log call syntax
-Both streaming syntax `LOG` and print_f `LOGF` syntax are available. 
+Both streaming syntax `LOG` and print_f `LOGF` syntax are available
 
 ```
 LOGF(INFO, "Hi log %d", 123);
