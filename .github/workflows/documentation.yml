@@ -1,0 +1,60 @@
+name: Publish docs via GitHub Pages
+on:
+  push:
+    branches:
+      - master
+    paths: 
+      - "**.md"
+      - "**.yml"
+      - docs/**
+
+jobs:
+  build:
+    name: Deploy docs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout master
+        uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+      - run: pip install mkdocs && pip install mkdocs-material==8.5
+      - name: Deploy site
+        run: mkdocs build
+      # build according to mkdocs.yml in root directory
+      - name: Deploy https://kjellkod.github.io/g3log/
+        run: mkdocs gh-deploy --force
+
+
+      # - name: Deploy docs
+      #   uses: mhausenblas/mkdocs-deploy-gh-pages@master
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     CONFIG_FILE: mkdocs.yml
+      #     EXTRA_PACKAGES: build-base
+          
+# # Publish docs via GitHub Pages to https://kjellkod.github.io/g3log/
+# on:
+#   push:
+#     branches:
+#       - master 
+#     paths: 
+#       - "**.md"
+#       - "**.yml"
+#       - docs/**
+
+      
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v4
+#       - uses: actions/setup-python@v5
+#         with:
+#           python-version: 3.x
+#       - run: pip install mkdocs && pip install mkdocs-material==8.5
+#       - name: Deploy site
+#         run: mkdocs build
+#       # build according to mkdocs.yml in root directory
+#       - name: Deploy https://kjellkod.github.io/g3log/
+#         run: mkdocs gh-deploy --force
