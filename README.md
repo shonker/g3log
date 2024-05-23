@@ -4,7 +4,7 @@
 
 
 # Welcome to g3log
-### Use [kjellkod.github.io/g3log/](https://kjellkod.github.io/g3log/) for best reading / searching / navigating of g3log's documentation. 
+### Use [kjellkod.github.io/g3log/](https://kjellkod.github.io/g3log/) for best reading / searching / navigating of g3log's documentation
 
 G3log is an asynchronous logger with three main features: 
 1. Intuitive `LOG(...)` API
